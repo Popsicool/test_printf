@@ -1,11 +1,11 @@
 #include "main.h"
 
-int dec(long long n);
+int dec(long n);
 
 int printbinary(unsigned int n)
 {
 	int count = 0;
-	long long bin = 0;
+	long bin = 0;
 	int rem, i = 1;
 
 	while (n!=0) 
@@ -21,7 +21,7 @@ int printbinary(unsigned int n)
 	return (count);
 }
 
-int dec(long long n)
+int dec(long n)
 {
 	int count = 0;
 	if (n < 0)

@@ -5,7 +5,18 @@ int printrot(char *s)
 	int print = 0;
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int a;
 
+	/*
+	for (count = 0; s[count] != '\0'; count++)
+	{
+		for (i = 0; i < 52; i++)
+		{
+			if (alphabet[i] == s[count]);
+			*(s[count]) == rot13[i];
+		}
+	}*/
+	
 	while (*(s + count) != '\0')
 	{
 		for (i = 0; i < 52; i++)
@@ -14,14 +25,14 @@ int printrot(char *s)
 			{
 				*(s + count) = rot13[i];
 				break;
-			}}
-					count++;
+			}
+		}
+		count++;
 	}
 
-	_printf("yes");
-	int a = 0;
-	for (a; s[a] != '\0'; a++)
+
+	for (a = 0; s[a] != '\0'; a++)
 		_putchar(s[a]);
-//	print += printstr(s);
+	/*print += printstr(s); */
 	return (print);
 }

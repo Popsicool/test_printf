@@ -18,6 +18,7 @@ int printhexadecimal(unsigned int);
 int printString(char *format);
 int printreverse(char *a);
 int printrot(char *a);
+int check_next(char c);
 struct node{
 	char data;
 	struct node *next;
