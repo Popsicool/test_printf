@@ -6,16 +6,6 @@ int printrot(char *s)
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int a;
-
-	/*
-	for (count = 0; s[count] != '\0'; count++)
-	{
-		for (i = 0; i < 52; i++)
-		{
-			if (alphabet[i] == s[count]);
-			*(s[count]) == rot13[i];
-		}
-	}*/
 	
 	while (*(s + count) != '\0')
 	{

@@ -15,7 +15,7 @@ int handle_function(int a, int b, char c);
 int printunsignint(unsigned int);
 int printunsignint2(unsigned int);
 int printocta(unsigned int);
-int printocta2(unsigned int);
+/*int printocta2(unsigned int);*/
 int printbinary(unsigned int);
 int printhexadecimal(unsigned int);
 int printString(char *format);

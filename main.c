@@ -3,24 +3,22 @@
 #include "main.h"
 
 /**
-*  * main - Entry point
-*   *
-*    * Return: 0 on success, error code otherwise
-*     */
+ *  * main - Entry point
+ *   *
+ *    * Return: 0 on success, error code otherwise
+ *     */
 int main(void)
 {
-int len, len2;
+		int len, len2;
 
-len = _printf("%6i", 0);
-len2 = printf("%6i", 0);
-fflush(stdout);
-printf("%d..\n",len);
-printf("%d..\n", len2);
-if (len != len2)
-{
-printf("Lengths differ.\n");
-fflush(stdout);
-return (1);
-}
-return (0);
+			len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+				len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+					fflush(stdout);
+						if (len != len2)
+								{
+											printf("Lengths differ.\n");
+													fflush(stdout);
+															return (1);
+																}
+							return (0);
 }

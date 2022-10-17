@@ -34,7 +34,3 @@ count += _printf("%d",octalNum);
 
 return (count);
 }
-int printocta2(unsigned int a)
-{
-printocta(a);
-}

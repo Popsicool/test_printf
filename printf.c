@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			if (format[i + 2] == 'u')
 				count += printunsignint2(va_arg(list, unsigned int));
 			if (format[i + 2] == 'o')
-				count += printocta2(va_arg(list, unsigned int));
+				count += printocta(va_arg(list, unsigned int));
 			i += 2;
 			count--;
 		}
@@ -84,13 +84,6 @@ int _printf(const char *format, ...)
 			va_end(list);
 			pos++;
 		}
-	/*else if (format[i] == 10)
-	{
-		_putchar('\n');
-		count--;
-		i++;
-
-	}*/
 		else if ((format[i] == '%') && (format[i + 1] == '%'))
 		{
 			_putchar(format[i]);
