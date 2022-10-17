@@ -18,7 +18,23 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%' && check_format(format[i + 1]))
+		if(format[i] == '%' && format[i + 1] == '6')
+		{
+			va_list list;
+			va_start(list, format);
+
+			if (format[i + 2] == 'd' || format[i + 2] == 'i')
+
+				count += printdecimal2(va_arg(list, int));
+			if (format[i + 2] == 'u')
+				count += printunsignint2(va_arg(list, unsigned int));
+			if (format[i + 2] == 'o')
+				count += printocta2(va_arg(list, unsigned int));
+			i += 2;
+			count--;
+		}
+
+		else if (format[i] == '%' && check_format(format[i + 1]))
 		{
 			va_list list;
 			int c;
@@ -51,6 +67,7 @@ int _printf(const char *format, ...)
 					else if (parameters[c] == 'r')
 						count += printreverse(va_arg(list, char *));
 					i++;
+					count--;
 				}
 
 				else
@@ -67,6 +84,13 @@ int _printf(const char *format, ...)
 			va_end(list);
 			pos++;
 		}
+	/*else if (format[i] == 10)
+	{
+		_putchar('\n');
+		count--;
+		i++;
+
+	}*/
 		else if ((format[i] == '%') && (format[i + 1] == '%'))
 		{
 			_putchar(format[i]);
