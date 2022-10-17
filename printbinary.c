@@ -7,20 +7,31 @@ int dec(long n);
 int printbinary(unsigned int n)
 {
 	int count = 0;
-	long bin = 0;
-	int rem, i = 1;
+	/*long bin = 0;*/
+	int arr[100];
+	int rem;
+	int i = 0;
 
 	while (n!=0) 
 	{
 		rem = n % 2;
 		n /= 2;
-		bin += rem * i;
-		i *= 10;
+		arr[i] = rem;
+		i++;
+		/*bin += rem * i;
+		i *= 10;*/
+
 	}
 
 
-	count = dec(bin);
-	count++;
+	count = i;
+	i--;
+	while (i >= 0)
+	{
+		_putchar((arr[i] + '0'));
+		i--;
+	}
+
 	return (count);
 }
 
