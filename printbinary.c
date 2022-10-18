@@ -1,5 +1,7 @@
 #include "main.h"
-
+/**
+* printbinary - prints binary digits
+*/
 int dec(long n);
 
 int printbinary(unsigned int n)
